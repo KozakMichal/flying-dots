@@ -1,0 +1,12 @@
+# main
+node_modules
+package-lock.json
+build
+
+# vim
+.*.swp
+.*.swo
+*~
+Session.vim
+.netrwhist
+
