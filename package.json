@@ -5,9 +5,14 @@
     "main": "build/index.js",
     "scripts": {
         "test": "mocha --colors -- build/**/*.spec.js",
-        "build": "tsc"
+        "build": "tsc",
+        "postinstall": "npm run build"
     },
-    "keywords": ["canvas", "dots", "animation"],
+    "keywords": [
+        "canvas",
+        "dots",
+        "animation"
+    ],
     "author": {
         "name": "Michal Kozak",
         "email": "michal@kozak.one"
