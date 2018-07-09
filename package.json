@@ -4,9 +4,13 @@
     "description": "Flying dots animation",
     "main": "build/index.js",
     "scripts": {
-        "test": "mocha --colors -- build/**/*.spec.js",
+        "test": "mocha --colors --compilers ts:ts-node/register --recursive src/**/*.spec.ts",
         "build": "tsc",
         "postinstall": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:KozakMichal/flying-dots.git"
     },
     "keywords": [
         "canvas",
@@ -24,6 +28,7 @@
     "devDependencies": {
         "@types/mocha": "^5.2.3",
         "chai": "^4.1.2",
-        "mocha": "^5.2.0"
+        "mocha": "^5.2.0",
+        "ts-node": "^7.0.0"
     }
 }
