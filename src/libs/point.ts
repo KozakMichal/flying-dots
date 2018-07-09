@@ -23,7 +23,7 @@ export default class Point {
         this.position = random.positionInclusive({
             width: this.canvas.width, 
             height: this.canvas.height
-        });
+        }, container.options.maxLineSize);
         this.speed = random.between(container.options.speed);
         this.radius = random.between(container.options.radius); 
     }

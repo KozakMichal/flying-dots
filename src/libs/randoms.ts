@@ -4,9 +4,13 @@
 
 import {Size, Position} from "./geo";
 
-export const positionInclusive = (size: Size): Position => ({
-    x: Math.random() * size.width,
-    y: Math.random() * size.height
+export const positionInclusive = (size: Size, boundaries: number): Position => ({
+    x: between({
+        min: -boundaries, max: size.width + boundaries
+    }),
+    y: between({
+        min: -boundaries, max: size.height + boundaries
+    })
 });
 
 export const positionNonInclusive = (size: Size): Position => {
